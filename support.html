@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>サポート — 仲良し家計簿</title>
+<meta name="description" content="仲良し家計簿のサポート・よくある質問・お問い合わせ。">
+<link rel="icon" href="./icon.png">
+<style>
+  :root{ color-scheme:light; --green:#2EB872; --teal:#1F9E8C; --ink:#16321F; --sub:#5C7A66;
+    --bg:#F2FAF4; --card:#fff; --line:#DCEFE1; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;color:var(--ink);
+    background:var(--bg);line-height:1.85;word-break:keep-all;overflow-wrap:anywhere}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(242,250,244,.82);
+    backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:760px;margin:0 auto;padding:0 20px;height:58px;display:flex;align-items:center;gap:16px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink)}
+  .brand img{width:30px;height:30px;border-radius:8px}
+  .bar-nav{margin-left:auto;display:flex;gap:18px;font-size:.9rem;color:var(--sub)}
+  .bar-nav a[aria-current]{color:var(--green);font-weight:700}
+
+  .hero{text-align:center;padding:44px 20px 10px}
+  .hero .badge img{width:84px;height:84px;border-radius:20px;box-shadow:0 10px 26px rgba(31,158,140,.22)}
+  .eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.18em;color:var(--teal);margin-top:14px}
+  .hero h1{font-size:1.7rem;font-weight:800;margin:.2rem 0}
+  .tagline{color:var(--sub);font-size:.98rem}
+
+  main{padding:24px 0 70px}
+  .lead{color:var(--sub);margin:6px 4px 22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:22px 22px;margin-bottom:18px;box-shadow:0 6px 20px -14px rgba(31,158,140,.35)}
+  .card.highlight{background:linear-gradient(160deg,rgba(54,196,126,.10),rgba(31,158,140,.08));
+    border-color:rgba(46,184,114,.3)}
+  .card h2{font-size:1.18rem;font-weight:800;margin-bottom:.5rem;color:var(--ink)}
+  .card h2::before{content:"";display:inline-block;width:4px;height:1em;background:var(--green);
+    border-radius:2px;margin-right:.5rem;vertical-align:-2px}
+  .card p{margin:.4rem 0}
+  .email{font-size:1.05rem;font-weight:700}
+  .faq{list-style:none;display:grid;gap:16px}
+  .faq>li{padding-left:0}
+  .faq .q{font-weight:800;color:var(--ink);display:block;margin-bottom:.15rem}
+  .faq .q::before{content:"Q. ";color:var(--green)}
+  .faq .a{color:var(--sub);font-size:.96rem}
+  .links{list-style:none;display:grid;gap:8px}
+  .links li::before{content:"→ ";color:var(--green)}
+
+  footer{text-align:center;color:var(--sub);font-size:.84rem;padding:24px 20px 50px;border-top:1px solid var(--line)}
+  .dot{opacity:.5;margin:0 .4em}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="topbar-in">
+  <a class="brand" href="/nakayoshi-kakeibo/"><img src="./icon.png" alt="">仲良し家計簿</a>
+  <nav class="bar-nav">
+    <a href="/nakayoshi-kakeibo/">アプリ</a>
+    <a href="./index.html">プライバシー</a>
+    <a href="./support.html" aria-current="page">サポート</a>
+  </nav>
+</div></div>
+
+<header class="hero">
+  <div class="badge"><img src="./icon.png" alt="仲良し家計簿 アイコン" width="84" height="84"></div>
+  <p class="eyebrow">SUPPORT</p>
+  <h1>仲良し家計簿</h1>
+  <p class="tagline">家族・カップルでひとつの家計簿を共有。</p>
+</header>
+
+<main class="wrap">
+  <p class="lead">仲良し家計簿をご利用いただきありがとうございます。本ページでは、お問い合わせ先とよくある質問をご案内します。</p>
+
+  <section class="card highlight">
+    <h2>お問い合わせ</h2>
+    <p>不具合のご報告・ご要望は、お気軽にご連絡ください。</p>
+    <p class="email">📧 <a href="mailto:s.hiro.dev2026@gmail.com">s.hiro.dev2026@gmail.com</a></p>
+    <p>アプリ内の <strong>「設定」</strong> 画面からもお問い合わせいただけます。</p>
+  </section>
+
+  <section class="card">
+    <h2>仲良し家計簿とは</h2>
+    <p>家族やカップルでひとつの家計簿を共有できる家計簿アプリです。招待コードを送るだけでパートナーと同じ家計簿に記録・閲覧でき、入力した内容はリアルタイムに同期されます。レシートは端末内のOCRでかざすだけ。リスト・グラフ・カレンダーの3つの表示や、共有カレンダー・予算管理で、毎日の家計管理を簡単に続けられます。</p>
+  </section>
+
+  <section class="card">
+    <h2>よくある質問</h2>
+    <ul class="faq">
+      <li>
+        <span class="q">家族・パートナーと共有するには？</span>
+        <span class="a">「設定」の共有セクションから、招待コード・QRコード・リンクで相手を招待できます。相手が同じ家計簿に参加すると、入力した収支がリアルタイムに同期されます。</span>
+      </li>
+      <li>
+        <span class="q">レシート読み取りはどう使いますか？</span>
+        <span class="a">「追加」タブのレシート読み取りから、レシートを撮影すると金額や日付を自動入力できます。iPhone（iOS 16以降）では端末内のOCRで処理するため、通信もアカウント登録も不要です。任意で、ご自身の Google Gemini API キーを設定するとAI解析も使えます。</span>
+      </li>
+      <li>
+        <span class="q">家計簿の種類（ペア・団体・みまもり）の違いは？</span>
+        <span class="a">ペア家計簿は2人まで・全データ共有の基本の家計簿（無料）。団体家計簿は最大50人でサークルや団体向け。みまもり家計簿は参加者が自分のデータのみ・管理者が全員分を確認できます。団体・みまもりの新規作成はゴールドプランでご利用いただけます。</span>
+      </li>
+      <li>
+        <span class="q">無料プランと有料プラン（シルバー／ゴールド）の違いは？</span>
+        <span class="a">無料（ブロンズ）でも基本機能はずっとお使いいただけます。シルバーで広告非表示・カレンダーイベント無制限・追加の家計簿への参加など、ゴールドで家計簿の複数作成・追加の家計簿の編集などが解放されます。</span>
+      </li>
+      <li>
+        <span class="q">削除した取引を元に戻せますか？</span>
+        <span class="a">はい。削除した取引は「ゴミ箱」からいつでも復元できます。</span>
+      </li>
+      <li>
+        <span class="q">データの引っ越し（CSV）はできますか？</span>
+        <span class="a">「設定」から取引・カレンダーのCSVエクスポート／インポートが行えます。他の家計簿アプリのバックアップからの取り込みにも対応しています。</span>
+      </li>
+      <li>
+        <span class="q">広告を非表示にしたい</span>
+        <span class="a">シルバー以上の有料プランにアップグレードすると、広告は表示されません。</span>
+      </li>
+      <li>
+        <span class="q">アカウントとデータを削除したい</span>
+        <span class="a">アプリの「設定」→「アカウントとデータを完全に削除」から、アカウントおよび関連データを削除できます。削除後の復元はできません。なお共有家計簿に他のメンバーが残っている場合、その家計簿と他メンバーのデータは引き続き保存されます。</span>
+      </li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>関連リンク</h2>
+    <ul class="links">
+      <li><a href="/nakayoshi-kakeibo/">アプリ紹介ページ</a></li>
+      <li><a href="./index.html">プライバシーポリシー</a></li>
+      <li><a href="/">Plexel</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  仲良し家計簿 <span class="dot">·</span> © 2026 Plexel
+</footer>
+
+</body>
+</html>
