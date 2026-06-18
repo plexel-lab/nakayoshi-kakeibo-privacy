@@ -16,18 +16,19 @@
   a:hover{text-decoration:underline}
   .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 
-  .topbar{position:sticky;top:0;z-index:10;background:rgba(242,250,244,.82);
-    backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
-  .topbar-in{max-width:760px;margin:0 auto;padding:8px 18px;min-height:58px;display:flex;align-items:center;gap:10px}
+  .site-header{position:sticky;top:0;z-index:50;backdrop-filter:saturate(160%) blur(14px);
+    background:rgba(242,250,244,.8);border-bottom:1px solid var(--line)}
+  .hdr-in{max-width:1040px;margin:0 auto;padding:8px 18px;min-height:60px;display:flex;align-items:center;gap:12px}
   .brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);flex:none}
-  .brand img{width:30px;height:30px;border-radius:8px}
-  .bar-nav{margin-left:auto;display:flex;gap:18px;font-size:.9rem;color:var(--sub);white-space:nowrap}
-  .bar-nav a[aria-current]{color:var(--green);font-weight:700}
-  @media(max-width:480px){
-    .topbar-in{gap:8px}
-    .brand .bn{display:none}
-    .bar-nav{gap:14px;font-size:.85rem}
-  }
+  .brand img{width:32px;height:32px;border-radius:9px}
+  .hdr-nav{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:.92rem;color:var(--sub);white-space:nowrap}
+  .hdr-nav a{color:var(--sub);text-decoration:none}
+  .hdr-nav a:hover{color:var(--ink);text-decoration:none}
+  .hdr-nav a[aria-current]{color:var(--green);font-weight:700}
+  .hdr-cta{color:#fff;font-weight:700;background:linear-gradient(135deg,#36C47E,#1F9E8C);
+    padding:.5rem 1.15rem;border-radius:999px;box-shadow:0 6px 16px -6px rgba(31,158,140,.6);text-decoration:none}
+  .hdr-cta:hover{transform:translateY(-1px);color:#fff;text-decoration:none}
+  @media(max-width:480px){.hdr-in{gap:8px}.brand .bn{display:none}.hdr-nav{gap:12px;font-size:.84rem}}
 
   .hero{text-align:center;padding:44px 20px 10px}
   .hero .badge img{width:84px;height:84px;border-radius:20px;box-shadow:0 10px 26px rgba(31,158,140,.22)}
@@ -60,14 +61,14 @@
 </head>
 <body>
 
-<div class="topbar"><div class="topbar-in">
+<header class="site-header"><div class="hdr-in">
   <a class="brand" href="/nakayoshi-kakeibo/"><img src="./icon.png" alt=""><span class="bn">仲良し家計簿</span></a>
-  <nav class="bar-nav">
-    <a href="/nakayoshi-kakeibo/">アプリ</a>
-    <a href="./index.html">プライバシー</a>
-    <a href="./support.html" aria-current="page">サポート</a>
+  <nav class="hdr-nav">
+    <a href="/nakayoshi-kakeibo-privacy/">プライバシー</a>
+    <a href="/nakayoshi-kakeibo-privacy/support.html" aria-current="page">サポート</a>
+    <a class="hdr-cta" href="https://apps.apple.com/jp/app/%E4%BB%B2%E8%89%AF%E3%81%97%E5%AE%B6%E8%A8%88%E7%B0%BF/id6776315974">入手</a>
   </nav>
-</div></div>
+</div></header>
 
 <header class="hero">
   <div class="badge"><img src="./icon.png" alt="仲良し家計簿 アイコン" width="84" height="84"></div>
