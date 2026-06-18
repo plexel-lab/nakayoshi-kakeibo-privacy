@@ -18,11 +18,16 @@
 
   .topbar{position:sticky;top:0;z-index:10;background:rgba(242,250,244,.82);
     backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
-  .topbar-in{max-width:760px;margin:0 auto;padding:0 20px;height:58px;display:flex;align-items:center;gap:16px}
-  .brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink)}
+  .topbar-in{max-width:760px;margin:0 auto;padding:8px 18px;min-height:58px;display:flex;align-items:center;gap:10px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);flex:none}
   .brand img{width:30px;height:30px;border-radius:8px}
-  .bar-nav{margin-left:auto;display:flex;gap:18px;font-size:.9rem;color:var(--sub)}
+  .bar-nav{margin-left:auto;display:flex;gap:18px;font-size:.9rem;color:var(--sub);white-space:nowrap}
   .bar-nav a[aria-current]{color:var(--green);font-weight:700}
+  @media(max-width:480px){
+    .topbar-in{gap:8px}
+    .brand .bn{display:none}
+    .bar-nav{gap:14px;font-size:.85rem}
+  }
 
   .hero{text-align:center;padding:44px 20px 10px}
   .hero .badge img{width:84px;height:84px;border-radius:20px;box-shadow:0 10px 26px rgba(31,158,140,.22)}
@@ -56,7 +61,7 @@
 <body>
 
 <div class="topbar"><div class="topbar-in">
-  <a class="brand" href="/nakayoshi-kakeibo/"><img src="./icon.png" alt="">仲良し家計簿</a>
+  <a class="brand" href="/nakayoshi-kakeibo/"><img src="./icon.png" alt=""><span class="bn">仲良し家計簿</span></a>
   <nav class="bar-nav">
     <a href="/nakayoshi-kakeibo/">アプリ</a>
     <a href="./index.html">プライバシー</a>

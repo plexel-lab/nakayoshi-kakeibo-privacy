@@ -3,120 +3,198 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>仲良し家計簿 - プライバシーポリシー</title>
+<title>プライバシーポリシー — 仲良し家計簿</title>
 <meta name="description" content="仲良し家計簿のプライバシーポリシー。取得する情報とその取扱いについて。">
+<link rel="icon" href="./icon.png">
 <style>
-  :root { color-scheme: light; }
-  body {
-    font-family: -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
-    line-height: 1.8; max-width: 760px; margin: 0 auto; padding: 24px 20px 80px;
-    color: #16321F; background: #F2FAF4;
+  :root{ color-scheme:light; --green:#2EB872; --green2:#36C47E; --teal:#1F9E8C; --ink:#16321F;
+    --sub:#5C7A66; --bg:#F2FAF4; --card:#fff; --line:#DCEFE1;
+    --grad:linear-gradient(135deg,#36C47E 0%,#1F9E8C 60%,#1A8FB0 100%); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;color:var(--ink);
+    background:var(--bg);line-height:1.9;-webkit-font-smoothing:antialiased;
+    word-break:keep-all;overflow-wrap:anywhere}
+  a{color:var(--teal);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+
+  /* topbar */
+  .topbar{position:sticky;top:0;z-index:10;background:rgba(242,250,244,.82);
+    backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--line)}
+  .topbar-in{max-width:760px;margin:0 auto;padding:8px 18px;min-height:58px;display:flex;align-items:center;gap:10px}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:800;color:var(--ink);flex:none}
+  .brand img{width:30px;height:30px;border-radius:8px}
+  .bar-nav{margin-left:auto;display:flex;gap:18px;font-size:.9rem;color:var(--sub);white-space:nowrap}
+  .bar-nav a[aria-current]{color:var(--green);font-weight:700}
+  @media(max-width:480px){
+    .topbar-in{gap:8px}
+    .brand .bn{display:none}
+    .bar-nav{gap:14px;font-size:.85rem}
   }
-  .nav { font-size: 0.9em; margin-bottom: 1.5em; }
-  a { color: #1F9E8C; }
-  h1 { font-size: 1.6em; margin-bottom: 0.2em; }
-  h2 { font-size: 1.2em; margin-top: 2em; border-bottom: 2px solid #2EB872; padding-bottom: 4px; }
-  .meta { color: #5C7A66; font-size: 0.9em; margin-bottom: 2em; }
-  ul { padding-left: 1.4em; }
-  table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.95em; background: #fff; }
-  th, td { border: 1px solid #CFE7D6; padding: 8px 10px; text-align: left; vertical-align: top; }
-  th { background: rgba(46,184,114,0.12); }
-  hr { border: none; border-top: 1px solid #CFE7D6; margin: 2.5em 0; }
-  footer { margin-top: 3em; color: #5C7A66; font-size: .85em; text-align: center; }
+
+  /* hero */
+  .hero{position:relative;text-align:center;padding:48px 20px 18px;overflow:hidden}
+  .hero .blob{position:absolute;border-radius:50%;filter:blur(64px);opacity:.5;z-index:0}
+  .hero .b1{width:300px;height:300px;background:#7FE3C0;top:-120px;left:-80px}
+  .hero .b2{width:280px;height:280px;background:#86C9FF;top:-90px;right:-90px;opacity:.35}
+  .hero .inner{position:relative;z-index:1}
+  .hero .badge img{width:76px;height:76px;border-radius:19px;box-shadow:0 10px 26px rgba(31,158,140,.22)}
+  .eyebrow{font-size:.74rem;font-weight:800;letter-spacing:.18em;color:var(--teal);margin-top:14px}
+  .hero h1{font-size:1.7rem;font-weight:800;margin:.2rem 0 .1rem}
+  .meta{color:var(--sub);font-size:.88rem}
+
+  main{padding:18px 0 70px}
+  .lead{color:var(--sub);margin:8px 4px 22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:18px;
+    padding:22px 22px;margin-bottom:16px;box-shadow:0 6px 22px -16px rgba(31,158,140,.4)}
+  .card h2{font-size:1.12rem;font-weight:800;margin-bottom:.5rem;color:var(--ink);display:flex;align-items:baseline;gap:.5rem}
+  .card h2 .n{display:inline-grid;place-items:center;min-width:1.7em;height:1.7em;border-radius:8px;
+    font-size:.8rem;color:#fff;background:var(--grad);flex:none}
+  .card p{margin:.5rem 0}
+  .card ul{padding-left:1.3em;margin:.4rem 0}
+  .card li{margin:.25rem 0}
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:.8rem 0}
+  table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92em}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:rgba(46,184,114,.12);font-weight:700;white-space:nowrap}
+
+  footer{text-align:center;color:var(--sub);font-size:.84rem;padding:24px 20px 50px;border-top:1px solid var(--line)}
+  .dot{opacity:.5;margin:0 .4em}
 </style>
 </head>
 <body>
-<div class="nav"><a href="/nakayoshi-kakeibo/">← 仲良し家計簿</a> ｜ <a href="./support.html">サポート</a> ｜ <a href="/">Plexel</a></div>
 
-<h1>プライバシーポリシー</h1>
-<p class="meta">アプリ名：仲良し家計簿（以下「本アプリ」）<br>
-制定日：2026年6月1日</p>
+<div class="topbar"><div class="topbar-in">
+  <a class="brand" href="/nakayoshi-kakeibo/"><img src="./icon.png" alt=""><span class="bn">仲良し家計簿</span></a>
+  <nav class="bar-nav">
+    <a href="/nakayoshi-kakeibo/">アプリ</a>
+    <a href="./index.html" aria-current="page">プライバシー</a>
+    <a href="./support.html">サポート</a>
+  </nav>
+</div></div>
 
-<p>本プライバシーポリシーは、本アプリの運営者（以下「運営者」）が、本アプリの利用において取得する利用者の情報の取扱いについて定めるものです。利用者は、本アプリを利用することにより、本ポリシーに同意したものとみなされます。</p>
+<header class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span>
+  <div class="inner">
+    <div class="badge"><img src="./icon.png" alt="仲良し家計簿 アイコン"></div>
+    <p class="eyebrow">PRIVACY</p>
+    <h1>プライバシーポリシー</h1>
+    <p class="meta">アプリ名：仲良し家計簿（以下「本アプリ」）／ 制定日：2026年6月1日</p>
+  </div>
+</header>
 
-<h2>1. 取得する情報</h2>
-<p>本アプリは、家計簿の記録・共有という機能を提供するために、以下の情報を取得・保存します。</p>
+<main class="wrap">
+  <p class="lead">本プライバシーポリシーは、本アプリの運営者（以下「運営者」）が、本アプリの利用において取得する利用者の情報の取扱いについて定めるものです。利用者は、本アプリを利用することにより、本ポリシーに同意したものとみなされます。</p>
 
-<table>
-  <tr><th>区分</th><th>内容</th><th>保存場所</th></tr>
-  <tr>
-    <td>アカウント情報</td>
-    <td>メールアドレス、表示名、認証用の利用者識別子（UID）。Apple・Google・メールアドレスによるサインインの際に取得します。</td>
-    <td>Firebase Authentication / Cloud Firestore（Google）</td>
-  </tr>
-  <tr>
-    <td>家計簿データ</td>
-    <td>取引の金額・日付・カテゴリ・メモ・品目名・支払い方法、家計簿名、メンバー構成、招待コード、カレンダーの予定・通知設定、予算など、利用者が本アプリに入力した内容。</td>
-    <td>Cloud Firestore（Google）</td>
-  </tr>
-  <tr>
-    <td>レシート画像</td>
-    <td>レシート読み取り機能を利用する場合に、利用者が撮影・選択したレシート画像。<strong>利用者が自身の Google AI（Gemini）APIキーを設定した場合に限り</strong>、解析のため後述の外部サービスへ送信されます。</td>
-    <td>端末内（一時保存）／解析時のみ Google Gemini API へ送信</td>
-  </tr>
-  <tr>
-    <td>端末内データ</td>
-    <td>Gemini APIキー、表示テーマ等の各種設定、未送信の保留レシート画像。これらは利用者の端末内にのみ保存され、運営者のサーバーには送信されません。</td>
-    <td>端末内（SharedPreferences／アプリ領域）</td>
-  </tr>
-</table>
+  <section class="card">
+    <h2><span class="n">1</span>取得する情報</h2>
+    <p>本アプリは、家計簿の記録・共有という機能を提供するために、以下の情報を取得・保存します。</p>
+    <div class="tablewrap">
+      <table>
+        <tr><th>区分</th><th>内容</th><th>保存場所</th></tr>
+        <tr>
+          <td>アカウント情報</td>
+          <td>メールアドレス、表示名、認証用の利用者識別子（UID）。Apple・Google・メールアドレスによるサインインの際に取得します。</td>
+          <td>Firebase Authentication / Cloud Firestore（Google）</td>
+        </tr>
+        <tr>
+          <td>家計簿データ</td>
+          <td>取引の金額・日付・カテゴリ・メモ・品目名・支払い方法、家計簿名、メンバー構成、招待コード、カレンダーの予定・通知設定、予算など、利用者が本アプリに入力した内容。</td>
+          <td>Cloud Firestore（Google）</td>
+        </tr>
+        <tr>
+          <td>レシート画像</td>
+          <td>レシート読み取り機能を利用する場合に、利用者が撮影・選択したレシート画像。<strong>利用者が自身の Google AI（Gemini）APIキーを設定した場合に限り</strong>、解析のため後述の外部サービスへ送信されます。</td>
+          <td>端末内（一時保存）／解析時のみ Google Gemini API へ送信</td>
+        </tr>
+        <tr>
+          <td>端末内データ</td>
+          <td>Gemini APIキー、表示テーマ等の各種設定、未送信の保留レシート画像。これらは利用者の端末内にのみ保存され、運営者のサーバーには送信されません。</td>
+          <td>端末内（SharedPreferences／アプリ領域）</td>
+        </tr>
+      </table>
+    </div>
+  </section>
 
-<h2>2. 利用目的</h2>
-<ul>
-  <li>家計簿の記録・集計・表示、および家計簿の家族・パートナー間での共有機能の提供</li>
-  <li>レシート画像からの品目・金額の自動読み取り（利用者が当該機能を有効にした場合）</li>
-  <li>カレンダー予定のローカル通知</li>
-  <li>本アプリの保守・不具合対応、利用者からのお問い合わせ対応</li>
-</ul>
+  <section class="card">
+    <h2><span class="n">2</span>利用目的</h2>
+    <ul>
+      <li>家計簿の記録・集計・表示、および家計簿の家族・パートナー間での共有機能の提供</li>
+      <li>レシート画像からの品目・金額の自動読み取り（利用者が当該機能を有効にした場合）</li>
+      <li>カレンダー予定のローカル通知</li>
+      <li>本アプリの保守・不具合対応、利用者からのお問い合わせ対応</li>
+    </ul>
+  </section>
 
-<h2>3. 第三者サービスへの提供・連携</h2>
-<p>本アプリは、機能の提供のために以下の外部サービスを利用しています。各サービスにおける情報の取扱いは、それぞれの提供事業者のプライバシーポリシーに従います。</p>
-<ul>
-  <li><strong>Google Firebase（Authentication / Cloud Firestore）</strong> — 認証および家計簿データの保存・同期に利用します。（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
-  <li><strong>Sign in with Apple</strong> — Apple アカウントによるサインインに利用します。（<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a>）</li>
-  <li><strong>Google サインイン</strong> — Google アカウントによるサインインに利用します。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
-  <li><strong>Google Gemini API（generativelanguage.googleapis.com）</strong> — 利用者がレシート読み取り機能を有効にし、自身の APIキーを設定した場合に限り、レシート画像が解析のため送信されます。送信される画像の取扱いは Google の規約に従います。（<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API の利用規約</a>）</li>
-  <li><strong>Google AdMob</strong> — 無料プランの利用者に広告を表示するために利用します。AdMob は広告配信のために広告識別子等の情報を取得・利用する場合があります。iOS では、トラッキングの許可（App Tracking Transparency）を求め、許可しない場合は非パーソナライズ広告を配信します。有料（シルバー・ゴールド）プランでは広告を表示しません。（<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob とプライバシー</a> / <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告ポリシー</a>）</li>
-</ul>
-<p>上記のほか、運営者が利用者の同意を得ずに、取得した情報を第三者へ販売・提供することはありません。ただし、法令に基づく開示請求があった場合等、正当な理由がある場合はこの限りではありません。</p>
+  <section class="card">
+    <h2><span class="n">3</span>第三者サービスへの提供・連携</h2>
+    <p>本アプリは、機能の提供のために以下の外部サービスを利用しています。各サービスにおける情報の取扱いは、それぞれの提供事業者のプライバシーポリシーに従います。</p>
+    <ul>
+      <li><strong>Google Firebase（Authentication / Cloud Firestore）</strong> — 認証および家計簿データの保存・同期に利用します。（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
+      <li><strong>Sign in with Apple</strong> — Apple アカウントによるサインインに利用します。（<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a>）</li>
+      <li><strong>Google サインイン</strong> — Google アカウントによるサインインに利用します。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
+      <li><strong>Google Gemini API（generativelanguage.googleapis.com）</strong> — 利用者がレシート読み取り機能を有効にし、自身の APIキーを設定した場合に限り、レシート画像が解析のため送信されます。送信される画像の取扱いは Google の規約に従います。（<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API の利用規約</a>）</li>
+      <li><strong>Google AdMob</strong> — 無料プランの利用者に広告を表示するために利用します。AdMob は広告配信のために広告識別子等の情報を取得・利用する場合があります。iOS では、トラッキングの許可（App Tracking Transparency）を求め、許可しない場合は非パーソナライズ広告を配信します。有料（シルバー・ゴールド）プランでは広告を表示しません。（<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob とプライバシー</a> / <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告ポリシー</a>）</li>
+    </ul>
+    <p>上記のほか、運営者が利用者の同意を得ずに、取得した情報を第三者へ販売・提供することはありません。ただし、法令に基づく開示請求があった場合等、正当な理由がある場合はこの限りではありません。</p>
+  </section>
 
-<h2>4. 広告について</h2>
-<p>本アプリは、無料（ブロンズ）プランの利用者に対して Google AdMob による広告を表示します。広告配信のために、AdMob が広告識別子等を利用することがあります。iOS では端末の「トラッキングの許可」設定に従い、許可しない場合は利用者を追跡しない非パーソナライズ広告を配信します。有料プランにアップグレードすると広告は表示されません。</p>
-<p>なお、本アプリは以下を行っていません。</p>
-<ul>
-  <li>位置情報の取得</li>
-  <li>利用者を識別する目的での独自のアクセス解析（アナリティクス）</li>
-  <li>取得した家計簿データそのものの広告目的での利用・第三者への販売</li>
-</ul>
+  <section class="card">
+    <h2><span class="n">4</span>広告について</h2>
+    <p>本アプリは、無料（ブロンズ）プランの利用者に対して Google AdMob による広告を表示します。広告配信のために、AdMob が広告識別子等を利用することがあります。iOS では端末の「トラッキングの許可」設定に従い、許可しない場合は利用者を追跡しない非パーソナライズ広告を配信します。有料プランにアップグレードすると広告は表示されません。</p>
+    <p>なお、本アプリは以下を行っていません。</p>
+    <ul>
+      <li>位置情報の取得</li>
+      <li>利用者を識別する目的での独自のアクセス解析（アナリティクス）</li>
+      <li>取得した家計簿データそのものの広告目的での利用・第三者への販売</li>
+    </ul>
+  </section>
 
-<h2>5. 端末の権限</h2>
-<p>本アプリは、以下の目的で端末の機能へのアクセス許可を求めることがあります。許可は利用者が端末の設定からいつでも変更できます。</p>
-<ul>
-  <li><strong>カメラ</strong> — レシートを撮影するため</li>
-  <li><strong>写真ライブラリ</strong> — レシートの写真を選択するため</li>
-  <li><strong>通知</strong> — カレンダー予定の通知を表示するため</li>
-</ul>
+  <section class="card">
+    <h2><span class="n">5</span>端末の権限</h2>
+    <p>本アプリは、以下の目的で端末の機能へのアクセス許可を求めることがあります。許可は利用者が端末の設定からいつでも変更できます。</p>
+    <ul>
+      <li><strong>カメラ</strong> — レシートを撮影するため</li>
+      <li><strong>写真ライブラリ</strong> — レシートの写真を選択するため</li>
+      <li><strong>通知</strong> — カレンダー予定の通知を表示するため</li>
+    </ul>
+  </section>
 
-<h2>6. データの保存期間と削除</h2>
-<p>家計簿データおよびアカウント情報は、利用者がアカウントを利用している間、保存されます。利用者は、本アプリの設定画面の「アカウントとデータを完全に削除」から、アカウントおよび関連するデータの削除を行うことができます。削除後、データの復元はできません。</p>
-<p>なお、複数人で共有している家計簿については、他のメンバーが残っている場合、当該家計簿および他メンバーが入力したデータは引き続き保存されます。</p>
+  <section class="card">
+    <h2><span class="n">6</span>データの保存期間と削除</h2>
+    <p>家計簿データおよびアカウント情報は、利用者がアカウントを利用している間、保存されます。利用者は、本アプリの設定画面の「アカウントとデータを完全に削除」から、アカウントおよび関連するデータの削除を行うことができます。削除後、データの復元はできません。</p>
+    <p>なお、複数人で共有している家計簿については、他のメンバーが残っている場合、当該家計簿および他メンバーが入力したデータは引き続き保存されます。</p>
+  </section>
 
-<h2>7. 児童のプライバシー</h2>
-<p>本アプリは13歳未満の児童による単独での利用を想定していません。13歳未満の方が利用する場合は、保護者の同意と監督のもとでご利用ください。</p>
+  <section class="card">
+    <h2><span class="n">7</span>児童のプライバシー</h2>
+    <p>本アプリは13歳未満の児童による単独での利用を想定していません。13歳未満の方が利用する場合は、保護者の同意と監督のもとでご利用ください。</p>
+  </section>
 
-<h2>8. 情報の安全管理</h2>
-<p>運営者は、取得した情報の漏えい・滅失・毀損の防止その他の安全管理のために、利用する外部サービスのセキュリティ機能（通信の暗号化、アクセス制御等）を適切に利用します。ただし、インターネットを通じた情報伝達の安全性を完全に保証するものではありません。</p>
+  <section class="card">
+    <h2><span class="n">8</span>情報の安全管理</h2>
+    <p>運営者は、取得した情報の漏えい・滅失・毀損の防止その他の安全管理のために、利用する外部サービスのセキュリティ機能（通信の暗号化、アクセス制御等）を適切に利用します。ただし、インターネットを通じた情報伝達の安全性を完全に保証するものではありません。</p>
+  </section>
 
-<h2>9. 本ポリシーの変更</h2>
-<p>運営者は、必要に応じて本ポリシーを変更することがあります。重要な変更を行う場合は、本アプリ内またはこのページにおいて告知します。変更後に本アプリを利用した場合、変更後のポリシーに同意したものとみなされます。</p>
+  <section class="card">
+    <h2><span class="n">9</span>本ポリシーの変更</h2>
+    <p>運営者は、必要に応じて本ポリシーを変更することがあります。重要な変更を行う場合は、本アプリ内またはこのページにおいて告知します。変更後に本アプリを利用した場合、変更後のポリシーに同意したものとみなされます。</p>
+  </section>
 
-<h2>10. お問い合わせ窓口</h2>
-<p>本ポリシーおよび個人情報の取扱いに関するお問い合わせは、以下までご連絡ください。</p>
-<ul>
-  <li>運営者：弘中 祥太</li>
-  <li>連絡先：<a href="mailto:s.hiro.dev2026@gmail.com">s.hiro.dev2026@gmail.com</a></li>
-</ul>
+  <section class="card">
+    <h2><span class="n">10</span>お問い合わせ窓口</h2>
+    <p>本ポリシーおよび個人情報の取扱いに関するお問い合わせは、以下までご連絡ください。</p>
+    <ul>
+      <li>運営者：弘中 祥太</li>
+      <li>連絡先：<a href="mailto:s.hiro.dev2026@gmail.com">s.hiro.dev2026@gmail.com</a></li>
+    </ul>
+  </section>
+</main>
 
-<footer>© 2026 Plexel</footer>
+<footer>
+  仲良し家計簿 <span class="dot">·</span> © 2026 Plexel
+</footer>
+
 </body>
 </html>
