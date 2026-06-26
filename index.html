@@ -82,7 +82,7 @@
     <div class="badge"><img src="./icon.png" alt="仲良し家計簿 アイコン"></div>
     <p class="eyebrow">PRIVACY</p>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">アプリ名：仲良し家計簿（以下「本アプリ」）／ 制定日：2026年6月1日</p>
+    <p class="meta">アプリ名：仲良し家計簿（以下「本アプリ」）／ 制定日：2026年6月1日 ／ 最終更新日：2026年6月26日</p>
   </div>
 </header>
 
@@ -107,12 +107,12 @@
         </tr>
         <tr>
           <td>レシート画像</td>
-          <td>レシート読み取り機能を利用する場合に、利用者が撮影・選択したレシート画像。<strong>利用者が自身の Google AI（Gemini）APIキーを設定した場合に限り</strong>、解析のため後述の外部サービスへ送信されます。</td>
-          <td>端末内（一時保存）／解析時のみ Google Gemini API へ送信</td>
+          <td>レシート読み取り機能を利用する場合に、利用者が撮影・選択したレシート画像。無料（ブロンズ）プランでは端末内OCRのみで処理され、外部に送信されません。<strong>有料（シルバー・ゴールド）プランの「AI高精度レシート」機能</strong>を利用する場合、画像は運営者のサーバー（Cloud Functions）を経由し、Google Gemini API へ送信されます。</td>
+          <td>端末内（一時保存）／AI高精度利用時のみ Cloud Functions 経由で Google Gemini API へ送信</td>
         </tr>
         <tr>
           <td>端末内データ</td>
-          <td>Gemini APIキー、表示テーマ等の各種設定、未送信の保留レシート画像。これらは利用者の端末内にのみ保存され、運営者のサーバーには送信されません。</td>
+          <td>表示テーマ・カテゴリラベル色・週始まり等の各種設定、未送信の保留レシート画像。これらは利用者の端末内にのみ保存され、運営者のサーバーには送信されません。</td>
           <td>端末内（SharedPreferences／アプリ領域）</td>
         </tr>
       </table>
@@ -136,7 +136,8 @@
       <li><strong>Google Firebase（Authentication / Cloud Firestore）</strong> — 認証および家計簿データの保存・同期に利用します。（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
       <li><strong>Sign in with Apple</strong> — Apple アカウントによるサインインに利用します。（<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a>）</li>
       <li><strong>Google サインイン</strong> — Google アカウントによるサインインに利用します。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
-      <li><strong>Google Gemini API（generativelanguage.googleapis.com）</strong> — 利用者がレシート読み取り機能を有効にし、自身の APIキーを設定した場合に限り、レシート画像が解析のため送信されます。送信される画像の取扱いは Google の規約に従います。（<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API の利用規約</a>）</li>
+      <li><strong>Google Cloud Functions / Gemini API</strong> — 有料（シルバー・ゴールド）プランの「AI高精度レシート」機能において、レシート画像の解析に利用します。画像は運営者のサーバー（Firebase Cloud Functions）を経由して Google Gemini API へ送信され、品目・金額・カテゴリの抽出に使用されます。送信された画像は解析後に保持されません。（<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API の利用規約</a>）</li>
+      <li><strong>Firebase Crashlytics</strong> — アプリのクラッシュ情報（端末モデル、OS バージョン、スタックトレース等）を収集し、不具合の特定・修正に利用します。個人を特定する情報は含まれません。（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a>）</li>
       <li><strong>Google AdMob</strong> — 無料プランの利用者に広告を表示するために利用します。AdMob は広告配信のために広告識別子等の情報を取得・利用する場合があります。iOS では、トラッキングの許可（App Tracking Transparency）を求め、許可しない場合は非パーソナライズ広告を配信します。有料（シルバー・ゴールド）プランでは広告を表示しません。（<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob とプライバシー</a> / <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告ポリシー</a>）</li>
     </ul>
     <p>上記のほか、運営者が利用者の同意を得ずに、取得した情報を第三者へ販売・提供することはありません。ただし、法令に基づく開示請求があった場合等、正当な理由がある場合はこの限りではありません。</p>
@@ -160,6 +161,7 @@
       <li><strong>カメラ</strong> — レシートを撮影するため</li>
       <li><strong>写真ライブラリ</strong> — レシートの写真を選択するため</li>
       <li><strong>通知</strong> — カレンダー予定の通知を表示するため</li>
+      <li><strong>Siri（音声入力）</strong> — 「家計簿に入力して」等の音声コマンドで取引を記録するため。音声データは Apple の Siri により処理され、運営者のサーバーには送信されません。</li>
     </ul>
   </section>
 
