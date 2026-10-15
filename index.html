@@ -82,7 +82,7 @@
     <div class="badge"><img src="./icon.png" alt="仲良し家計簿 アイコン"></div>
     <p class="eyebrow">PRIVACY</p>
     <h1>プライバシーポリシー</h1>
-    <p class="meta">アプリ名：仲良し家計簿（以下「本アプリ」）／ 制定日：2026年6月1日 ／ 最終更新日：2026年6月26日</p>
+    <p class="meta">アプリ名：仲良し家計簿（以下「本アプリ」）／ 制定日：2026年6月1日 ／ 最終更新日：2026年10月15日</p>
   </div>
 </header>
 
@@ -107,8 +107,13 @@
         </tr>
         <tr>
           <td>レシート画像</td>
-          <td>レシート読み取り機能を利用する場合に、利用者が撮影・選択したレシート画像。無料（ブロンズ）プランでは端末内OCRのみで処理され、外部に送信されません。<strong>有料（シルバー・ゴールド）プランの「AI高精度レシート」機能</strong>を利用する場合、画像は運営者のサーバー（Cloud Functions）を経由し、Google Gemini API へ送信されます。</td>
+          <td>レシート読み取り機能を利用する場合に、利用者が撮影・選択したレシート画像。端末内OCRで読み取る場合は外部に送信されません。<strong>「AI高精度レシート」機能</strong>（プランごとに月間の利用枚数の上限があります）を利用する場合、画像は運営者のサーバー（Cloud Functions）を経由し、Google Gemini API へ送信されます。</td>
           <td>端末内（一時保存）／AI高精度利用時のみ Cloud Functions 経由で Google Gemini API へ送信</td>
+        </tr>
+        <tr>
+          <td>不具合報告・機能要望</td>
+          <td>利用者が「不具合報告・機能要望」から送信した内容（タイトル・詳細・発生した画面・再現手順・任意で添付したスクリーンショット、機能要望への投票）。不具合報告には、原因調査のためアプリのバージョン・OS のバージョン・端末の機種・利用中の家計簿の識別子が自動で添付されます。送信内容は利用者のアカウントと紐づけて保存されます。</td>
+          <td>Cloud Firestore（Google）／運営者への通知メール</td>
         </tr>
         <tr>
           <td>端末内データ</td>
@@ -126,6 +131,7 @@
       <li>レシート画像からの品目・金額の自動読み取り（利用者が当該機能を有効にした場合）</li>
       <li>カレンダー予定のローカル通知</li>
       <li>本アプリの保守・不具合対応、利用者からのお問い合わせ対応</li>
+      <li>不具合報告・機能要望の確認と対応、および機能要望の公開・投票機能の提供</li>
     </ul>
   </section>
 
@@ -136,7 +142,8 @@
       <li><strong>Google Firebase（Authentication / Cloud Firestore）</strong> — 認証および家計簿データの保存・同期に利用します。（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a> / <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
       <li><strong>Sign in with Apple</strong> — Apple アカウントによるサインインに利用します。（<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a>）</li>
       <li><strong>Google サインイン</strong> — Google アカウントによるサインインに利用します。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
-      <li><strong>Google Cloud Functions / Gemini API</strong> — 有料（シルバー・ゴールド）プランの「AI高精度レシート」機能において、レシート画像の解析に利用します。画像は運営者のサーバー（Firebase Cloud Functions）を経由して Google Gemini API へ送信され、品目・金額・カテゴリの抽出に使用されます。送信された画像は解析後に保持されません。（<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API の利用規約</a>）</li>
+      <li><strong>Google Cloud Functions / Gemini API</strong> — 「AI高精度レシート」機能において、レシート画像の解析に利用します。画像は運営者のサーバー（Firebase Cloud Functions）を経由して Google Gemini API へ送信され、品目・金額・カテゴリの抽出に使用されます。送信された画像は解析後に保持されません。（<a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API の利用規約</a>）</li>
+      <li><strong>Gmail（Google）</strong> — 不具合報告・機能要望が送信された際に、その内容（不具合報告のスクリーンショットを含む）を運営者へ通知するメールの送信に利用します。（<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>）</li>
       <li><strong>Firebase Crashlytics</strong> — アプリのクラッシュ情報（端末モデル、OS バージョン、スタックトレース等）を収集し、不具合の特定・修正に利用します。個人を特定する情報は含まれません。（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーとセキュリティ</a>）</li>
       <li><strong>Google AdMob</strong> — 無料プランの利用者に広告を表示するために利用します。AdMob は広告配信のために広告識別子等の情報を取得・利用する場合があります。iOS では、トラッキングの許可（App Tracking Transparency）を求め、許可しない場合は非パーソナライズ広告を配信します。有料（シルバー・ゴールド）プランでは広告を表示しません。（<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob とプライバシー</a> / <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google 広告ポリシー</a>）</li>
     </ul>
@@ -159,9 +166,10 @@
     <p>本アプリは、以下の目的で端末の機能へのアクセス許可を求めることがあります。許可は利用者が端末の設定からいつでも変更できます。</p>
     <ul>
       <li><strong>カメラ</strong> — レシートを撮影するため</li>
-      <li><strong>写真ライブラリ</strong> — レシートの写真を選択するため</li>
+      <li><strong>写真ライブラリ</strong> — レシートの写真や、不具合報告に添付するスクリーンショットを選択するため</li>
       <li><strong>通知</strong> — カレンダー予定の通知を表示するため</li>
       <li><strong>Siri（音声入力）</strong> — 「家計簿に入力して」等の音声コマンドで取引を記録するため。音声データは Apple の Siri により処理され、運営者のサーバーには送信されません。</li>
+      <li><strong>マイク・音声認識</strong> — 「音声で入力」で話した内容を取引に変換するため。音声は Apple の音声認識機能により処理され、運営者のサーバーには送信されません。</li>
     </ul>
   </section>
 
@@ -169,6 +177,7 @@
     <h2><span class="n">6</span>データの保存期間と削除</h2>
     <p>家計簿データおよびアカウント情報は、利用者がアカウントを利用している間、保存されます。利用者は、本アプリの設定画面の「アカウントとデータを完全に削除」から、アカウントおよび関連するデータの削除を行うことができます。削除後、データの復元はできません。</p>
     <p>なお、複数人で共有している家計簿については、他のメンバーが残っている場合、当該家計簿および他メンバーが入力したデータは引き続き保存されます。</p>
+    <p>不具合報告・機能要望および投票の記録も、アカウントの削除時にあわせて削除されます。機能要望は、運営者が確認したものに限り、タイトルと詳細が他の利用者にも表示されます（投稿者の名前やアカウント情報は表示されません）。</p>
   </section>
 
   <section class="card">
